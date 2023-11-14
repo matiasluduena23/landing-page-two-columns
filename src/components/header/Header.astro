@@ -1,0 +1,26 @@
+---
+import logo from '../../assets/logo.svg';
+import Navbar from './Navbar.astro';
+---
+
+<header>
+    <div class="container">
+        <div class="flex">
+            <a href="" class="icon">
+                <img src={logo.src} alt="logo brand" />
+            </a>
+
+            <Navbar />
+        </div>
+    </div>
+</header>
+
+<style>
+    header {
+        padding-block: 2.5rem;
+    }
+
+    a {
+        width: clamp(80px, 4vw, 200px);
+    }
+</style>

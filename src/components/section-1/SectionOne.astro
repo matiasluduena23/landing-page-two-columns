@@ -1,0 +1,131 @@
+---
+import imgPeople from '../../assets/illustration-2.svg';
+import { Image } from 'astro:assets';
+import bgImage from '../../assets/bg-curve-mobile.svg';
+import TestimonialCard from './TestimonialCard.astro';
+---
+
+<section>
+    <img class="bg-img" src={bgImage.src} alt="" />
+    <div class="content">
+        <div class="container">
+            <div class="wrap-image">
+                <Image
+                    class="img-people"
+                    src={imgPeople}
+                    alt="people working"
+                />
+            </div>
+            <div class="wrap-content">
+                <h2>Stay productive, wherever you are</h2>
+                <p>
+                    Never let location be an issue when accessing your files.
+                    Fylo has you covered for all of your file storage needs.
+                </p>
+                <p>
+                    Securely share files and folders with friends, family and
+                    colleagues for live collaboration. No email attachments
+                    required!
+                </p>
+                <a href="#">
+                    <span>See how Fylo works</span>
+                    <svg
+                        width="16"
+                        height="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        ><defs
+                            ><circle id="b" cx="6" cy="6" r="6"></circle><filter
+                                x="-25%"
+                                y="-25%"
+                                width="150%"
+                                height="150%"
+                                filterUnits="objectBoundingBox"
+                                id="a"
+                                ><feOffset
+                                    in="SourceAlpha"
+                                    result="shadowOffsetOuter1"
+                                ></feOffset><feGaussianBlur
+                                    stdDeviation="1"
+                                    in="shadowOffsetOuter1"
+                                    result="shadowBlurOuter1"
+                                ></feGaussianBlur><feColorMatrix
+                                    values="0 0 0 0 0.239215686 0 0 0 0 0.62745098 0 0 0 0 0.560784314 0 0 0 0.793506567 0"
+                                    in="shadowBlurOuter1"
+                                ></feColorMatrix></filter
+                            ></defs
+                        ><g fill="none" fill-rule="evenodd"
+                            ><g transform="translate(2 2)"
+                                ><use
+                                    fill="#000"
+                                    filter="url(#a)"
+                                    xlink:href="#b"></use><use
+                                    fill="#3DA08F"
+                                    xlink:href="#b"></use></g
+                            ><path
+                                d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z"
+                                fill="#FFF"></path></g
+                        ></svg
+                    >
+                </a>
+            </div>
+        </div>
+        <TestimonialCard />
+    </div>
+</section>
+
+<style>
+    .bg-img {
+        width: 100%;
+    }
+
+    .content {
+        background-color: var(--light-grayish-blue);
+        padding-bottom: 5rem;
+    }
+
+    .img-people {
+        height: 100%;
+        padding-block: 3rem;
+    }
+
+    .wrap-content {
+        padding-block: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
+    }
+
+    h2 {
+        font-size: clamp(1rem, 3vw, 2.5rem);
+        text-align: center;
+        color: var(--very-dark-blue);
+    }
+
+    p {
+        color: var(--desaturated-blue);
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        width: max-content;
+        margin-inline: auto;
+        gap: 0.4rem;
+        color: var(--moderate-cyan);
+        border-bottom: 1.5px solid var(--moderate-cyan);
+        transition: opacity 200ms ease-in-out;
+    }
+
+    a:hover {
+        opacity: 0.6;
+    }
+
+    a:hover svg {
+        transition: transform 200ms ease-in-out;
+    }
+
+    a:hover svg {
+        transform: translateX(5px);
+    }
+</style>

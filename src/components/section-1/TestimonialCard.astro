@@ -1,0 +1,63 @@
+---
+import { Image } from 'astro:assets';
+import profileImage from '../../assets/avatar-testimonial.jpg';
+import quotesIcon from '../../assets/icon-quotes.svg';
+---
+
+<aside class="container">
+    <article>
+        <span>
+            <Image class="quotes" src={quotesIcon} alt="quotes icon" />
+        </span>
+        <p>
+            Fylo has improved our team productivity by an order of magnitude.
+            Since making the switch our team has become a well-oiled
+            collaboration machine.
+        </p>
+        <div class="card-detail">
+            <Image
+                class="profile"
+                src={profileImage}
+                alt="profile photo of a men"
+            />
+            <div class="card-men-info">
+                <p class="name">Kyle Burton</p>
+                <p class="work">Founder & CEO, Huddle</p>
+            </div>
+        </div>
+    </article>
+</aside>
+
+<style>
+    article {
+        background-color: white;
+        padding: 1.5rem;
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 0.7rem;
+        border-radius: 5px;
+        box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+
+    .card-detail {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .name {
+        font-weight: 700;
+    }
+
+    .work {
+        font-size: 10px;
+    }
+</style>

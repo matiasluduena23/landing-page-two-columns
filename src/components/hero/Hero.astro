@@ -1,0 +1,49 @@
+---
+import heroImage from '../../assets/illustration-1.svg';
+import { Image } from 'astro:assets';
+import Form from '../Form.astro';
+---
+
+<section>
+    <div class="container">
+        <Image src={heroImage} alt="people working in a file" />
+        <div class="wrap-text">
+            <h1>All your files in one secure location, accessible anywhere.</h1>
+            <p>
+                Fylo stores your most important files in one secure location.
+                Access them wherever you need, share and collaborate with
+                friends, family, and co-workers.
+            </p>
+            <Form
+                text="Get Started"
+                inputPlaceholder="Enter your email."
+                idBtn="hero-form-btn"
+                idInput="hero-input"
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        padding-block: 5rem;
+        text-align: center;
+    }
+
+    section > div {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    img {
+        height: 100%;
+    }
+
+    .wrap-text {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        color: var(--very-dark-blue);
+    }
+</style>

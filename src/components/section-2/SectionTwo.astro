@@ -1,0 +1,36 @@
+---
+import Form from '../Form.astro';
+---
+
+<section>
+    <div class="container">
+        <div class="wrap-text">
+            <h2>Get early access today</h2>
+            <p>
+                It only takes a minute to sign up and our free starter tier is
+                extremely generous. If you have any questions, our support team
+                would be happy to help you.
+            </p>
+        </div>
+
+        <Form
+            text="Get Started For Free"
+            inputPlaceholder="email@example.com"
+            idBtn="section-two-form-btn"
+            idInput="section-input"
+        />
+    </div>
+</section>
+
+<style>
+    section {
+        background-color: var(--desaturated-blue);
+        color: var(--light-grayish-blue);
+        padding-block: 4rem;
+        text-align: center;
+    }
+
+    p {
+        margin-block: 1.3rem;
+    }
+</style>

@@ -1,0 +1,25 @@
+---
+import phoneIcon from '../../assets/icon-phone.svg';
+import mailIcon from '../../assets/icon-email.svg';
+---
+
+<address>
+    <div class="wrap-info">
+        <img src={phoneIcon.src} alt="phone icon" />
+        <p>Phone: +1-543-123-4567</p>
+    </div>
+    <div class="wrap-info">
+        <img src={mailIcon.src} alt="mail icon" />
+        <p>example@fylo.com</p>
+    </div>
+</address>
+
+<style>
+    .wrap-info {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-style: normal;
+        padding-bottom: 0.8rem;
+    }
+</style>
