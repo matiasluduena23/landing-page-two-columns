@@ -43,7 +43,7 @@ function showSuccess(message:string, formTarget: HTMLFormElement | null) {
     formTarget?.classList.remove('show-error');
     formTarget?.classList.add('show-success');
     
-    clearSuccess((span as HTMLSpanElement), formTarget)
+    clearSuccess((span as HTMLSpanElement), formTarget!)
 }
 
 
@@ -54,8 +54,9 @@ const validateEmail = (email: string) => {
   };
 
   function clearSuccess(span: HTMLSpanElement, form: HTMLFormElement  ) {
+    const formElement = form?.querySelector('input');
     setTimeout(() => {
-        form.querySelector('input').value = "";
+         formElement!.value = "";
         span.innerText = "";
     }, 3000);
     
