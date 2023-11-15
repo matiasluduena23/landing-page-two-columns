@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import logo from '../../assets/logo.svg';
 import Address from '../footer/Address.astro';
 import SocialIcon from '../footer/SocialIcons.astro';
 ---
@@ -16,7 +14,7 @@ import SocialIcon from '../footer/SocialIcons.astro';
                 ></svg
             >
         </span>
-        <section class="grid">
+        <section class="grid-auto">
             <Address />
             <nav>
                 <ul>
@@ -33,7 +31,9 @@ import SocialIcon from '../footer/SocialIcons.astro';
                     <li><a href="#">Privacy</a></li>
                 </ul>
             </nav>
-            <SocialIcon />
+            <div class="social">
+                <SocialIcon />
+            </div>
         </section>
     </div>
 </footer>
@@ -50,8 +50,7 @@ import SocialIcon from '../footer/SocialIcons.astro';
         margin-bottom: 2rem;
     }
 
-    .grid {
-        display: grid;
+    .grid-auto {
         gap: 3rem;
     }
 
@@ -66,5 +65,17 @@ import SocialIcon from '../footer/SocialIcons.astro';
 
     a:hover {
         color: var(--bright-blue);
+    }
+
+    @media (min-width: 659px) {
+        .social {
+            justify-self: start;
+        }
+    }
+
+    @media (min-width: 1100px) {
+        .social {
+            justify-self: start;
+        }
     }
 </style>

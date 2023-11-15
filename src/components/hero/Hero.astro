@@ -1,25 +1,25 @@
 ---
 import heroImage from '../../assets/illustration-1.svg';
 import { Image } from 'astro:assets';
-import Form from '../Form.astro';
+
+import FormHero from './FormHero.astro';
 ---
 
 <section>
     <div class="container">
-        <Image src={heroImage} alt="people working in a file" />
-        <div class="wrap-text">
-            <h1>All your files in one secure location, accessible anywhere.</h1>
-            <p>
-                Fylo stores your most important files in one secure location.
-                Access them wherever you need, share and collaborate with
-                friends, family, and co-workers.
-            </p>
-            <Form
-                text="Get Started"
-                inputPlaceholder="Enter your email."
-                idBtn="hero-form-btn"
-                idInput="hero-input"
-            />
+        <div class="wrap-content">
+            <Image src={heroImage} alt="people working in a file" />
+            <div class="wrap-text">
+                <h1>
+                    All your files in one secure location, accessible anywhere.
+                </h1>
+                <p>
+                    Fylo stores your most important files in one secure
+                    location. Access them wherever you need, share and
+                    collaborate with friends, family, and co-workers.
+                </p>
+                <FormHero />
+            </div>
         </div>
     </div>
 </section>
@@ -30,7 +30,7 @@ import Form from '../Form.astro';
         text-align: center;
     }
 
-    section > div {
+    .wrap-content {
         display: flex;
         flex-direction: column;
         gap: 3rem;
@@ -45,5 +45,30 @@ import Form from '../Form.astro';
         flex-direction: column;
         gap: 1.5rem;
         color: var(--very-dark-blue);
+        max-width: 500px;
+        margin-inline: auto;
+    }
+
+    h1 {
+        font-size: clamp(1rem, 2.8vw, 2.4rem);
+    }
+
+    @media (min-width: 800px) {
+        .wrap-content {
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .wrap-content > * {
+            width: 50%;
+        }
+
+        .wrap-text {
+            text-align: start;
+            margin: 0;
+            max-width: 600px;
+        }
     }
 </style>

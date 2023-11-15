@@ -6,7 +6,7 @@ import Navbar from './Navbar.astro';
 <header>
     <div class="container">
         <div class="flex">
-            <a href="" class="icon">
+            <a href="/" class="icon">
                 <img src={logo.src} alt="logo brand" />
             </a>
 
@@ -20,7 +20,11 @@ import Navbar from './Navbar.astro';
         padding-block: 2.5rem;
     }
 
-    a {
-        width: clamp(80px, 4vw, 200px);
+    .icon {
+        width: clamp(6rem, 17vw, 10rem);
+    }
+
+    img {
+        width: 100%;
     }
 </style>

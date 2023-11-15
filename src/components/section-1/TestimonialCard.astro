@@ -4,7 +4,7 @@ import profileImage from '../../assets/avatar-testimonial.jpg';
 import quotesIcon from '../../assets/icon-quotes.svg';
 ---
 
-<aside class="container">
+<aside>
     <article>
         <span>
             <Image class="quotes" src={quotesIcon} alt="quotes icon" />
@@ -39,6 +39,9 @@ import quotesIcon from '../../assets/icon-quotes.svg';
         gap: 0.7rem;
         border-radius: 5px;
         box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.2);
+        max-width: 340px;
+        margin-top: 1.5rem;
+        margin-inline: auto;
     }
 
     .profile {
@@ -59,5 +62,11 @@ import quotesIcon from '../../assets/icon-quotes.svg';
 
     .work {
         font-size: 10px;
+    }
+
+    @media (min-width: 800px) {
+        article {
+            margin-inline: 0;
+        }
     }
 </style>

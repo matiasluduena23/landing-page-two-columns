@@ -1,0 +1,99 @@
+---
+
+---
+
+<form id="hero-form">
+    <input
+        type="email"
+        name="email"
+        id="hero-input"
+        placeholder="Enter your email."
+    />
+    <span id="hero-message-element" ></span>
+    <button id="hero-form-btn">Get Started</button>
+</form>
+
+<style>
+    form {
+        padding-inline: 0.3rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input,
+    button {
+        padding: 0.8rem;
+        width: 100%;
+        display: block;
+        border-radius: 5px;
+        font-weight: 700;
+        max-width: 300px;
+    }
+
+    input {
+        border: 1px solid var(--desaturated-blue);
+        margin-bottom: 1.3rem;
+    }
+
+    input::placeholder {
+        color: var(--light-gray);
+    }
+
+    button {
+        border: 1px solid var(--bright-blue);
+        color: var(--light-grayish-blue);
+        background-color: var(--bright-blue);
+        cursor: pointer;
+        transition: opacity 200ms ease-in-out;
+        max
+    }
+
+    button:hover {
+        opacity: 0.7;
+    }
+
+    #hero-message-element {
+        position: absolute;
+        bottom: 2.7rem;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        font-size: 14px;
+    }
+
+    .show-error #hero-message-element {
+        color: rgb(225, 71, 71);
+    }
+
+    .show-error input {
+        border: 1px solid rgb(225, 71, 71);
+    }
+
+    .show-success #hero-message-element {
+        font-weight: 700;
+        color: rgb(42, 155, 42);
+    }
+
+    .show-success input {
+        border: 1px solid var(--desaturated-blue);
+    }
+
+   /* style desktop form component hero section */
+@media (min-width: 600px) {
+  form{
+      flex-direction: row;
+      gap: 0.7rem;
+      padding-inline: 0;
+  }
+
+  form input {
+      margin-bottom: 0;
+  }
+
+  form button {
+      max-width: 180px;
+  }
+}
+</style>

@@ -1,24 +1,21 @@
 ---
-import Form from '../Form.astro';
+import FormSectionTwo from './FormSectionTwo.astro';
 ---
 
 <section>
     <div class="container">
-        <div class="wrap-text">
-            <h2>Get early access today</h2>
-            <p>
-                It only takes a minute to sign up and our free starter tier is
-                extremely generous. If you have any questions, our support team
-                would be happy to help you.
-            </p>
-        </div>
+        <div class="wrap-content">
+            <div class="wrap-text">
+                <h2>Get early access today</h2>
+                <p>
+                    It only takes a minute to sign up and our free starter tier
+                    is extremely generous. If you have any questions, our
+                    support team would be happy to help you.
+                </p>
+            </div>
 
-        <Form
-            text="Get Started For Free"
-            inputPlaceholder="email@example.com"
-            idBtn="section-two-form-btn"
-            idInput="section-input"
-        />
+            <FormSectionTwo />
+        </div>
     </div>
 </section>
 
@@ -32,5 +29,19 @@ import Form from '../Form.astro';
 
     p {
         margin-block: 1.3rem;
+    }
+
+    @media (min-width: 800px) {
+        .wrap-content {
+            display: grid;
+            align-items: start;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: space-between;
+        }
+
+        .wrap-text {
+            text-align: start;
+            max-width: 500px;
+        }
     }
 </style>
